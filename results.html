@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="results-container">
+    <h1>Form Results</h1>
+    <div id="results"></div>
+    <a href="index.html" class="back-link">Back to Form</a>
+</div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+let resultsDiv = document.getElementById("results");
+
+resultsDiv.innerHTML = `
+<p><strong>Name:</strong> ${params.get("name")}</p>
+<p><strong>Email:</strong> ${params.get("email")}</p>
+<p><strong>Password:</strong> ${params.get("password")}</p>
+<p><strong>Gender:</strong> ${params.get("gender") || 'Not selected'}</p>
+<p><strong>Subscribe:</strong> ${params.get("subscribe") || 'No'}</p>
+<p><strong>Country:</strong> ${params.get("country")}</p>
+<p><strong>Bio:</strong> ${params.get("bio")}</p>
+<p><strong>Date of Birth:</strong> ${params.get("birth")}</p>
+<p><strong>Skill Level:</strong> ${params.get("level")}</p>
+`;
+</script>
+</body>
+</html>
 
