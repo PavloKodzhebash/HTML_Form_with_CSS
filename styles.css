@@ -43,6 +43,15 @@ input[type="range"] {
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 5px;
+    cursor: pointer;
+}
+
+label input[type="radio"] {
+    margin-right: 5px;
+}
+
+label input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 button {
@@ -74,4 +83,3 @@ button:hover {
 p {
     margin: 8px 0;
 }
-
